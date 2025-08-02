@@ -104,18 +104,23 @@ const Projects = () => {
                 <div className="flex gap-3 pt-4">
                   <Button 
                     className="flex-1 bg-primary hover:bg-primary/90 text-white"
-                    disabled
+                    asChild
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    View Code
+                    <a href="https://github.com/sachin4568" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code
+                    </a>
                   </Button>
                   <Button 
                     variant="outline" 
                     className="flex-1 border-primary text-primary hover:bg-primary hover:text-white"
-                    disabled
+                    onClick={() => {
+                      const element = document.getElementById('contact');
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    Contact Me
                   </Button>
                 </div>
               </CardContent>
