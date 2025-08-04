@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Chaubey - Portfolio</title>
+    <meta name="description" content="Frontend Developer & Problem Solver">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand" onclick="scrollToSection('home')">
+                Sachin.dev
+            </div>
+            
+            <div class="nav-links">
+                <button onclick="scrollToSection('home')">Home</button>
+                <button onclick="scrollToSection('about')">About</button>
+                <button onclick="scrollToSection('skills')">Skills</button>
+                <button onclick="scrollToSection('projects')">Projects</button>
+                <button onclick="scrollToSection('contact')">Contact</button>
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon hidden"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-menu hidden" id="mobileMenu">
+            <button onclick="scrollToSection('home')">Home</button>
+            <button onclick="scrollToSection('about')">About</button>
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">
+                    <span class="wave">👋</span>
+                    <span>Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">Sachin Chaubey</h1>
+                <h2 class="hero-title">Frontend Developer & Problem Solver</h2>
+                <p class="hero-description">
+                    Passionate BTech CSE student crafting elegant solutions with modern web technologies. 
+                    Specialized in React, JavaScript, and creating exceptional user experiences.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('projects')">
+                        <i data-lucide="eye"></i>
+                        View Projects
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('contact')">
+                        <i data-lucide="mail"></i>
+                        Contact Me
+                    </button>
+                    <button class="btn-outline" onclick="downloadResume()">
+                        <i data-lucide="download"></i>
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Learning</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,112C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-divider"></div>
+                <p>Get to know more about my background and passion for technology</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate BTech Computer Science Engineering student with a deep love for frontend development 
+                        and problem-solving. My journey in technology started with curiosity about how websites work, and it 
+                        has evolved into a dedicated pursuit of creating beautiful, functional, and user-friendly web applications.
+                    </p>
+                    <p>
+                        I believe in writing clean, efficient code and staying updated with the latest technologies. 
+                        My goal is to contribute to innovative projects that make a positive impact on users' lives.
+                    </p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Education</h3>
+                        <h4>Bachelor of Technology - Computer Science Engineering</h4>
+                        <div class="education-details">
+                            <div class="detail">
+                                <i data-lucide="map-pin"></i>
+                                <span>India</span>
+                            </div>
+                            <div class="detail">
+                                <i data-lucide="calendar"></i>
+                                <span>2022 - 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="section-divider"></div>
+                <p>Expertise in modern technologies and programming languages</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-delay="0s">
+                    <div class="skill-icon frontend">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Creating responsive and interactive user interfaces</p>
+                </div>
+                
+                <div class="skill-card" data-delay="0.1s">
+                    <div class="skill-icon cpp">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>C++</h3>
+                    <p>System programming and competitive programming</p>
+                </div>
+                
+                <div class="skill-card" data-delay="0.2s">
+                    <div class="skill-icon python">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Data analysis, AI/ML, and backend development</p>
+                </div>
+                
+                <div class="skill-card" data-delay="0.3s">
+                    <div class="skill-icon javascript">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Modern web development and dynamic applications</p>
+                </div>
+            </div>
+            
+            <div class="additional-skills">
+                <h3>Additional Technologies</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="section-divider"></div>
+                <p>A showcase of my recent work and technical capabilities</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-delay="0s">
+                    <div class="project-icon portfolio">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A modern, responsive portfolio website showcasing my skills and projects with smooth animations and interactive elements.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Responsive Design</li>
+                            <li>Modern UI/UX</li>
+                            <li>Smooth Animations</li>
+                            <li>Interactive Elements</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <button class="btn-primary" onclick="window.open('https://github.com/sachins-portfolio', '_blank')">
+                            <i data-lucide="github"></i>
+                            View Code
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('contact')">
+                            <i data-lucide="mail"></i>
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-delay="0.1s">
+                    <div class="project-icon ecommerce">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured e-commerce web application with modern design, secure payment integration, and efficient inventory management.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>User Authentication</li>
+                            <li>Shopping Cart</li>
+                            <li>Payment Integration</li>
+                            <li>Admin Dashboard</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MongoDB</span>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <button class="btn-primary" onclick="window.open('https://github.com/sachins-ecommerce', '_blank')">
+                            <i data-lucide="github"></i>
+                            View Code
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('contact')">
+                            <i data-lucide="mail"></i>
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-delay="0.2s">
+                    <div class="project-icon weather">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <h3>Weather Dashboard</h3>
+                    <p>An intuitive weather application providing real-time weather data, forecasts, and location-based weather information with a clean interface.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Real-time Weather Data</li>
+                            <li>Location Detection</li>
+                            <li>5-Day Forecast</li>
+                            <li>Interactive Maps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">API Integration</span>
+                        <span class="tech-badge">CSS3</span>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <button class="btn-primary" onclick="window.open('https://github.com/sachins-weather', '_blank')">
+                            <i data-lucide="github"></i>
+                            View Code
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('contact')">
+                            <i data-lucide="mail"></i>
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <h3>Interested in working together?</h3>
+                <p>I'm always open to discussing new opportunities and exciting projects.</p>
+                <button class="btn-primary" onclick="scrollToSection('contact')">
+                    <i data-lucide="mail"></i>
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <div class="section-divider"></div>
+                <p>Ready to start a conversation? Reach out through any of these channels</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card email">
+                    <div class="contact-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Email</h3>
+                        <p>sachins.dev@email.com</p>
+                        <button class="btn-primary" onclick="window.open('mailto:sachins.dev@email.com', '_blank')">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contact-card linkedin">
+                    <div class="contact-icon">
+                        <i data-lucide="linkedin"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>LinkedIn</h3>
+                        <p>/in/sachin-chaubey</p>
+                        <button class="btn-primary" onclick="window.open('https://linkedin.com/in/sachin-chaubey', '_blank')">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contact-card github">
+                    <div class="contact-icon">
+                        <i data-lucide="github"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>GitHub</h3>
+                        <p>@sachin-dev</p>
+                        <button class="btn-primary" onclick="window.open('https://github.com/sachin-dev', '_blank')">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contact-card opportunity">
+                    <div class="contact-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Open to Opportunities</h3>
+                        <p>Currently seeking internship opportunities to grow and contribute to innovative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span>Built with</span>
+                    <i data-lucide="heart" class="heart-icon"></i>
+                    <span>by Sachin Chaubey</span>
+                </div>
+                
+                <p class="footer-copyright">
+                    © 2024 Sachin Chaubey. All rights reserved.
+                </p>
+                
+                <div class="footer-tags">
+                    <span>BTech CSE Student</span>
+                    <span>•</span>
+                    <span>Frontend Developer</span>
+                    <span>•</span>
+                    <span>Problem Solver</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
