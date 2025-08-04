@@ -25,7 +25,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-secondary transition-all duration-1000"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(99, 102, 241, 0.8) 0%, rgba(147, 51, 234, 0.6) 25%, rgba(251, 146, 60, 0.4) 50%, rgba(99, 102, 241, 0.8) 100%)`
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(99, 102, 241, 0.68) 0%, rgba(147, 51, 234, 0.51) 25%, rgba(251, 146, 60, 0.34) 50%, rgba(99, 102, 241, 0.68) 100%)`
         }}
       ></div>
 
@@ -106,17 +106,6 @@ const Hero = () => {
               Contact Me
             </Button>
 
-            <Button 
-              size="lg" 
-              variant="ghost"
-              asChild
-              className="border-2 border-white/20 bg-transparent text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:-translate-y-1"
-            >
-              <a href="mailto:chaubeysachin63@gmail.com">
-                <Download className="mr-2 w-5 h-5" />
-                Resume
-              </a>
-            </Button>
           </div>
 
           {/* Stats section */}
